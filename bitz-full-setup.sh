@@ -13,14 +13,16 @@ while true; do
   echo "3) 🧶 Install Node.js 22 + Yarn"
   echo "4) 🌐 Install Solana CLI"
   echo "5) 🌍 Set Eclipse RPC URL"
-  echo "6) 🔑 Import Wallet (id.json)"
-  echo "7) 🧾 Check Wallet Address"
-  echo "8) ⛏️  Install Bitz CLI"
-  echo "9) 🚀 Start Mining (in background screen)"
-  echo "10) 🖥️  Attach to Bitz screen"
-  echo "11) ♻️  Restart Miner"
-  echo "12) 💰 Bitz Claim"
-  echo "13) 🏦 Bitz Account"
+  echo "6) 🆕 Generate New Wallet"
+  echo "7) 🔐 Show Private Key of Current Wallet"
+  echo "8) 🔑 Import Wallet (id.json)"
+  echo "9) 🧾 Check Wallet Address"
+  echo "10) ⛏️  Install Bitz CLI"
+  echo "11) 🚀 Start Mining (in background screen)"
+  echo "12) 🖥️  Attach to Bitz screen"
+  echo "13) ♻️  Restart Miner"
+  echo "14) 💰 Bitz Claim"
+  echo "15) 🏦 Bitz Account"
   echo "0) ❌ Exit"
   read -p $'\n👉 Enter your choice: ' choice
 
@@ -37,7 +39,7 @@ while true; do
       ;;
     3)
       echo "\n🧶 Installing Node.js 22 + Yarn..."
-      curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - 
+      curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
       sudo apt-get install -y nodejs
       sudo npm install -g yarn
       ;;
@@ -53,39 +55,53 @@ while true; do
       solana config set --url https://mainnetbeta-rpc.eclipse.xyz/
       ;;
     6)
+      echo "\n🆕 Generating new wallet..."
+      mkdir -p ~/.config/solana
+      solana-keygen new --outfile ~/.config/solana/id.json
+      echo "✅ New wallet generated and saved to ~/.config/solana/id.json"
+      ;;
+    7)
+      echo "\n🔐 Displaying your private key (id.json):"
+      if [ -f ~/.config/solana/id.json ]; then
+        cat ~/.config/solana/id.json
+      else
+        echo "❌ No wallet found at ~/.config/solana/id.json"
+      fi
+      ;;
+    8)
       echo "\n🔑 Paste your id.json private key array now, then press CTRL+D"
       mkdir -p ~/.config/solana
       cat > ~/.config/solana/id.json
       ;;
-    7)
+    9)
       echo "\n🧾 Your wallet address:"
       solana address
       ;;
-    8)
+    10)
       echo "\n⛏️  Installing Bitz CLI..."
       cargo install bitz
       ;;
-    9)
+    11)
       echo "\n🚀 Starting Miner in screen session..."
       screen -S bitz -dm bash -c 'bitz collect --cores 4'
-      echo "✅ Miner started in background. Use option 10 to view."
+      echo "✅ Miner started in background. Use option 12 to view."
       ;;
-    10)
+    12)
       echo "\n🖥️  Attaching to Bitz screen..."
       screen -r bitz
       ;;
-    11)
+    13)
       echo "\n♻️  Restarting Bitz miner..."
       screen -S bitz -X quit
       sleep 1
       screen -S bitz -dm bash -c 'bitz collect --cores 4'
       echo "🔁 Miner restarted in new screen session."
       ;;
-    12)
+    14)
       echo "\n💰 Claiming Bitz tokens..."
       bitz claim
       ;;
-    13)
+    15)
       echo "\n🏦 Checking Bitz account..."
       bitz account
       ;;
