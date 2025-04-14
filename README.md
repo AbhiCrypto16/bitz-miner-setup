@@ -1,14 +1,33 @@
-
 ## 🚀 Bitz Miner Interactive Setup
+
+> ⚠️ **IMPORTANT: Must Read Before Starting!**
+>
+> After installing **Solana CLI** (during script setup), you **must reboot your VPS** to ensure it works correctly.
+>
+> ❗ Without rebooting, **Solana CLI will not be detected**, and the script may fail to run properly.
+>
+> ✅ **Steps to safely reboot VPS:**
+>
+> 1. If you're running the script inside a `screen` session, type `0` to **exit the script**.
+> 2. Then reboot using:
+>
+>     ```bash
+>     sudo reboot
+>     ```
+>
+> 3. After VPS restarts, log back in via SSH and re-run the script:
+>
+>     ```bash
+>     ./bitz-full-setup.sh
+>     ```
+
+---
 
 Before running the `bitz-full-setup.sh` script, please ensure your system is ready by following these prerequisites and steps.
 
 ---
 
 ### ✅ Prerequisites
-
-0.005+ ETH on the Eclipse network
-A Backpack wallet (or another Eclipse-compatible wallet
 
 #### 👇 If You Purchased VPS from [QuickPod.io](https://quickpod.io)
 
@@ -80,17 +99,7 @@ To run the script again after reboot:
 
 ---
 
-### ⚠️ Important Notes
-
-#### 🔄 After Installing Solana CLI (Step 4)
-
-After installing Solana CLI during the script setup, **reboot your VPS** to ensure environment variables and paths are properly applied:
-
-```bash
-sudo reboot
-```
-
-Without rebooting, Solana CLI might not be detected properly.
+### ⚠️ Additional Notes
 
 #### 🔐 Wallet Import – Private Key Format (Step 6)
 
@@ -101,5 +110,3 @@ When importing your wallet in **Step 6**, make sure your **private key is in JSO
 ```
 
 ✅ Do **NOT** paste it as a plain string or text. It must be in valid bracketed format (`[]`) for the import to work.
-
----
