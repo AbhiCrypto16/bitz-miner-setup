@@ -19,6 +19,8 @@ while true; do
   echo "9) 🚀 Start Mining (in background screen)"
   echo "10) 🖥️  Attach to Bitz screen"
   echo "11) ♻️  Restart Miner"
+  echo "12) 💰 Bitz Claim"
+  echo "13) 🏦 Bitz Account"
   echo "0) ❌ Exit"
   read -p $'\n👉 Enter your choice: ' choice
 
@@ -35,7 +37,7 @@ while true; do
       ;;
     3)
       echo "\n🧶 Installing Node.js 22 + Yarn..."
-      curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+      curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - 
       sudo apt-get install -y nodejs
       sudo npm install -g yarn
       ;;
@@ -78,6 +80,14 @@ while true; do
       sleep 1
       screen -S bitz -dm bash -c 'bitz collect --cores 4'
       echo "🔁 Miner restarted in new screen session."
+      ;;
+    12)
+      echo "\n💰 Claiming Bitz tokens..."
+      bitz claim
+      ;;
+    13)
+      echo "\n🏦 Checking Bitz account..."
+      bitz account
       ;;
     0)
       echo "👋 Exiting..."
