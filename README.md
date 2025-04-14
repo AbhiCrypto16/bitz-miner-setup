@@ -2,20 +2,15 @@
 
 > ⚠️ **IMPORTANT: Must Read Before Starting!**
 >
-> After installing **Solana CLI** (during script setup), you **must reboot your VPS** to ensure it works correctly.
+> After installing **Solana CLI** (during the script setup), you **must reboot your VPS** once.
 >
-> ❗ Without rebooting, **Solana CLI will not be detected**, and the script may fail to run properly.
+> ❗ Without rebooting, **Solana CLI will not be detected**, and the script may not work properly.
 >
-> ✅ **Steps to safely reboot VPS:**
+> ✅ **How to reboot properly:**
 >
-> 1. If you're running the script inside a `screen` session, type `0` to **exit the script**.
-> 2. Then reboot using:
->
->     ```bash
->     sudo reboot
->     ```
->
-> 3. After VPS restarts, log back in via SSH and re-run the script:
+> - Simply **close your VPS window / tab** or disconnect from it.
+> - Then **log in again** to your VPS via SSH.
+> - After logging back in, run the script again using:
 >
 >     ```bash
 >     ./bitz-full-setup.sh
