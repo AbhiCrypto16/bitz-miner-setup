@@ -96,7 +96,7 @@ To run the script again after reboot:
 
 ### ⚠️ Additional Notes
 
-#### 🔐 Wallet Import – Private Key Format (Step 6)
+#### 🔐 Wallet Import – Private Key Format (Step 8)
 
 When importing your wallet in **Step 6**, make sure your **private key is in JSON array format**, like this:
 
